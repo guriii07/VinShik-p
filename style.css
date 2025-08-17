@@ -1,0 +1,141 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background: #f8f9fb;
+  color: #333;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.logo .vin { color: #00bfa5; }
+.logo .shik { color: #111; }
+
+.menu {
+  list-style: none;
+}
+.menu li {
+  padding: 12px;
+  margin: 6px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.menu li:hover,
+.menu li.active {
+  background: #e6f7f5;
+  color: #00bfa5;
+}
+
+/* Main Content */
+.main {
+  margin-left: 220px; /* leave space for sidebar */
+  flex: 1;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: transparent;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.nav-right {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.profile {
+  font-size: 22px;
+}
+
+/* Welcome Section */
+.welcome {
+  margin-bottom: 20px;
+}
+.welcome h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.welcome p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.card .percent {
+  font-size: 13px;
+  font-weight: 600;
+  color: #00bfa5;
+}
+.card .percent.negative {
+  color: #e63946;
+}
+.card .title {
+  font-size: 13px;
+  color: #555;
+}
+.card .bottom {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.card canvas {
+  width: 50px !important;
+  height: 30px !important;
+}

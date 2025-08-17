@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VinShik Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo"><span class="vin">Vin</span><span class="shik">Shik</span></div>
+      <ul class="menu">
+        <li class="active">🏠 Home</li>
+        <li>📅 Calendar</li>
+        <li>🗺️ Map</li>
+        <li>👥 Clients</li>
+        <li>💼 Jobs</li>
+        <li>💬 Quotes</li>
+        <li>⚙️ My Services</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      
+      <!-- Navbar (inside main, aligned right) -->
+      <nav class="navbar">
+        <div class="nav-right">
+          <span>🔔</span>
+          <span>✉️</span>
+          <span>⚙️</span>
+          <span class="profile">👩</span>
+        </div>
+      </nav>
+
+      <!-- Welcome Section -->
+      <section class="welcome">
+        <h2>Welcome back, Julie 👋</h2>
+        <p>Here's what you need to focus on today</p>
+      </section>
+
+      <!-- Stats Cards -->
+      <section class="cards">
+        <div class="card blue">
+          <div class="top">
+            <span class="percent">+12.2%</span>
+            <p class="title">Active Jobs</p>
+          </div>
+          <div class="bottom">
+            <h3>43.7k</h3>
+            <canvas id="chart1"></canvas>
+          </div>
+        </div>
+
+        <div class="card orange">
+          <div class="top">
+            <span class="percent negative">-31.1%</span>
+            <p class="title">Jobs in Progress</p>
+          </div>
+          <div class="bottom">
+            <h3>92.3k</h3>
+            <canvas id="chart2"></canvas>
+          </div>
+        </div>
+
+        <div class="card green">
+          <div class="top">
+            <span class="percent">+3.3%</span>
+            <p class="title">Finished Jobs</p>
+          </div>
+          <div class="bottom">
+            <h3>66.3k</h3>
+            <canvas id="chart3"></canvas>
+          </div>
+        </div>
+
+        <div class="card purple">
+          <div class="top">
+            <span class="percent">+31.1%</span>
+            <p class="title">New Leads</p>
+          </div>
+          <div class="bottom">
+            <h3>92.3k</h3>
+            <canvas id="chart4"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
